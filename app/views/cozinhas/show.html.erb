@@ -1,19 +1,30 @@
-<p id="notice"><%= notice %></p>
+<div class="row">
+	<div class="container">
+		<p id="notice" class=""><%= notice %></p>
 
-<p>
-  <strong>Nome:</strong>
-  <%= @cozinha.nome %>
-</p>
+		<div class="page-header">
+			<h1 class="title">Restaurante</h1>
+		</div>
+		<div class="texto-exibir">
+			<p>
+				<strong>Nome:</strong>
+				<%= @cozinha.nome %>
+			</p>
+			<br>
+			<p>
+				<strong>Endereco:</strong>
+				<%= @cozinha.endereco %>
+			</p>
+			<br>
+			<p>
+				<strong>Telefone:</strong>
+				<%= @cozinha.telefone %>
+			</p>
+		</div>
+		<div class="btn-container">
+			<%= link_to 'Editar', edit_cozinha_path(@cozinha), :class => "btn btn-primary" %>
+			<%= link_to 'Voltar', cozinhas_path, :class => "btn btn-default" %>
 
-<p>
-  <strong>Endereco:</strong>
-  <%= @cozinha.endereco %>
-</p>
-
-<p>
-  <strong>Telefone:</strong>
-  <%= @cozinha.telefone %>
-</p>
-
-<%= link_to 'Edit', edit_cozinha_path(@cozinha) %> |
-<%= link_to 'Back', cozinhas_path %>
+		</div>
+	</div>
+</div>

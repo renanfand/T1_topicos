@@ -42,7 +42,7 @@ class CozinhasController < ApplicationController
   def update
     respond_to do |format|
       if @cozinha.update(cozinha_params)
-        format.html { redirect_to @cozinha, notice: 'Cozinha was successfully updated.' }
+        format.html { redirect_to @cozinha, notice: 'Cozinha editada com sucesso!', :class => "alert alert-success" }
         format.json { render :show, status: :ok, location: @cozinha }
       else
         format.html { render :edit }

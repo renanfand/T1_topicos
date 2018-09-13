@@ -1,22 +1,25 @@
 <%= form_with(model: ingrediente, local: true) do |form| %>
-  <% if ingrediente.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(ingrediente.errors.count, "error") %> prohibited this ingrediente from being saved:</h2>
+<% if ingrediente.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(ingrediente.errors.count, "error") %> prohibited this ingrediente from being saved:</h2>
 
-      <ul>
-      <% ingrediente.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% ingrediente.errors.full_messages.each do |message| %>
+    <li><%= message :class => "alert alert-success" %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
+<div class="col-xs-6">   
   <div class="field">
     <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
+    <%= form.text_area :descricao, :class => "form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-success" %>
   </div>
+
+</div>
 <% end %>

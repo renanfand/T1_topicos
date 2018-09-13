@@ -1,6 +1,15 @@
-<h1>Editing Cozinha</h1>
+<div class="row">
+	<div class="container">
+		<div class="page-header">
+			<h1 class="title">Editar Cozinha</h1>
+		</div>
 
-<%= render 'form', cozinha: @cozinha %>
-
-<%= link_to 'Show', @cozinha %> |
-<%= link_to 'Back', cozinhas_path %>
+		<div class="texto-exibir">
+			<%= render 'form', cozinha: @cozinha %>
+		</div>
+		<div class="btn-container col-xs-12">
+			<%= link_to 'Visualizar', @cozinha, :class => "btn btn-primary" %>
+			<%= link_to 'Voltar', cozinhas_path, :class => "btn btn-default" %>
+		</div>
+	</div>
+</div>

@@ -1,32 +1,38 @@
 <%= form_with(model: cozinha, local: true) do |form| %>
-  <% if cozinha.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(cozinha.errors.count, "error") %> prohibited this cozinha from being saved:</h2>
+<% if cozinha.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(cozinha.errors.count, "error") %> prohibited this cozinha from being saved:</h2>
 
-      <ul>
-      <% cozinha.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :nome %>
-    <%= form.text_field :nome %>
-  </div>
-
-  <div class="field">
-    <%= form.label :endereco %>
-    <%= form.text_field :endereco %>
-  </div>
-
-  <div class="field">
-    <%= form.label :telefone %>
-    <%= form.number_field :telefone %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <ul>
+    <% cozinha.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
 <% end %>
+<div class="row">
+  <div class="container">
+    <div class="page-header">
+      <div class="col-xs-6">   
+        <div class="field">
+          <%= form.label :nome %>
+          <%= form.text_field :nome, :class => "form-control" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :endereco %>
+          <%= form.text_field :endereco, :class => "form-control" %>
+        </div>
+
+        <div class="field">
+          <%= form.label :telefone %>
+          <%= form.number_field :telefone, :class => "form-control" %>
+        </div>
+
+        <div class="actions">
+          <%= form.submit :class => "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
