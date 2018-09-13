@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  descricao: MyText
+  preco: 1.5
+  tempoPreparo: 1.5
+
+two:
+  descricao: MyText
+  preco: 1.5
+  tempoPreparo: 1.5

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cozinha.nome %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @cozinha.endereco %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @cozinha.telefone %>
+</p>
+
+<%= link_to 'Edit', edit_cozinha_path(@cozinha) %> |
+<%= link_to 'Back', cozinhas_path %>
