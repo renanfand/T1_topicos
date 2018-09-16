@@ -28,7 +28,7 @@ class CozinhasController < ApplicationController
 
     respond_to do |format|
       if @cozinha.save
-        format.html { redirect_to @cozinha, notice: 'Cozinha was successfully created.' }
+        format.html { redirect_to @cozinha, notice: 'Cozinha criada com sucesso!' }
         format.json { render :show, status: :created, location: @cozinha }
       else
         format.html { render :new }

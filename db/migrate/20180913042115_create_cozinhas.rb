@@ -3,7 +3,7 @@ class CreateCozinhas < ActiveRecord::Migration[5.2]
     create_table :cozinhas do |t|
       t.string :nome
       t.string :endereco
-      t.integer :telefone
+      t.string :telefone
 
       t.timestamps
     end

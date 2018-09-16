@@ -5,33 +5,31 @@
 
   <ul>
     <% cozinha.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
+    <li class="alert alert-success"><%= message %></li>
     <% end %>
   </ul>
 </div>
 <% end %>
 <div class="row">
   <div class="container">
-    <div class="page-header">
-      <div class="col-xs-6">   
-        <div class="field">
-          <%= form.label :nome %>
-          <%= form.text_field :nome, :class => "form-control" %>
-        </div>
+    <div class="col-xs-6">   
+      <div class="field">
+        <%= form.label :nome %>
+        <%= form.text_field :nome, :class => "form-control" %>
+      </div>
 
-        <div class="field">
-          <%= form.label :endereco %>
-          <%= form.text_field :endereco, :class => "form-control" %>
-        </div>
+      <div class="field">
+        <%= form.label :endereco %>
+        <%= form.text_field :endereco, :class => "form-control" %>
+      </div>
 
-        <div class="field">
-          <%= form.label :telefone %>
-          <%= form.number_field :telefone, :class => "form-control" %>
-        </div>
+      <div class="field">
+        <%= form.label :telefone %>
+        <%= form.number_field :telefone, :class => "form-control" %>
+      </div>
 
-        <div class="actions">
-          <%= form.submit :class => "btn btn-success" %>
-        </div>
+      <div class="actions">
+        <%= form.submit :class => "btn btn-success" %>
       </div>
     </div>
   </div>
