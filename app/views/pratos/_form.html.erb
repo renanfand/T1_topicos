@@ -29,6 +29,16 @@
         <%= form.text_field :tempoPreparo, :class => "form-control" %>
       </div>
 
+      <div class="field">
+        <%= form.label :ingrediente %>
+        <%= form.select :ingrediente, Ingrediente.all.collect {|ingrediente| [ingrediente.descricao, ingrediente.id]} %>
+      </div>
+
+      <div class="field">
+        <%= form.label :cozinha %>
+        <%= form.select :cozinha, Cozinha.all.collect {|cozinha| [cozinha.nome, cozinha.id]} %>
+      </div>
+      
       <div class="actions">
         <%= form.submit :class => "btn btn-success" %>
       </div>

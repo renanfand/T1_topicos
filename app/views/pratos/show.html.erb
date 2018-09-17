@@ -20,6 +20,18 @@
 				<strong>Tempopreparo:</strong>
 				<%= @prato.tempoPreparo %>
 			</p>
+			<br>
+			<p>
+				<strong>Ingrediente:</strong>
+				<%= @prato.ingrediente.descricao %>
+			</p>
+
+			<br>
+			<p>
+				<strong>Cozinha:</strong>
+				<%= @prato.cozinha.nome %>
+			</p>
+
 		</div>
 		<div class="btn-container">
 			<%= link_to 'Editar', edit_prato_path(@prato), :class => "btn btn-primary" %>

@@ -69,6 +69,6 @@ class PratosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def prato_params
-      params.require(:prato).permit(:descricao, :preco, :tempoPreparo)
+      params.require(:prato).permit(:descricao, :preco, :tempoPreparo, :ingrediente, :cozinha)
     end
 end

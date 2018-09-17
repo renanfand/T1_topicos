@@ -3,9 +3,7 @@ class CreatePratos < ActiveRecord::Migration[5.2]
     create_table :pratos do |t|
       t.text :descricao
       t.float :preco
-      t.float :tempoPreparo
-
-      t.timestamps
+      t.string :tempoPreparo
     end
   end
 end

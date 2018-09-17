@@ -4,8 +4,6 @@ class CreateCozinhas < ActiveRecord::Migration[5.2]
       t.string :nome
       t.string :endereco
       t.string :telefone
-
-      t.timestamps
     end
   end
 end
