@@ -56,7 +56,7 @@ class CozinhasController < ApplicationController
   def destroy
     @cozinha.destroy
     respond_to do |format|
-      format.html { redirect_to cozinhas_url, notice: 'Cozinha was successfully destroyed.' }
+      format.html { redirect_to cozinhas_url, notice: 'Cozinha excluida com sucesso!' }
       format.json { head :no_content }
     end
   end

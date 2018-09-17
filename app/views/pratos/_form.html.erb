@@ -1,32 +1,38 @@
 <%= form_with(model: prato, local: true) do |form| %>
-  <% if prato.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(prato.errors.count, "error") %> prohibited this prato from being saved:</h2>
+<% if prato.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(prato.errors.count, "error") %> prohibited this prato from being saved:</h2>
 
-      <ul>
-      <% prato.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+  <ul>
+    <% prato.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="row">
+  <div class="container">
+    <div class="col-xs-6">   
+
+      <div class="field">
+        <%= form.label :descricao %>
+        <%= form.text_area :descricao, :class => "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :preco %>
+        <%= form.text_field :preco, :class => "form-control" %>
+      </div>
+
+      <div class="field">
+        <%= form.label :tempo_Preparo %>
+        <%= form.text_field :tempoPreparo, :class => "form-control" %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit :class => "btn btn-success" %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :descricao %>
-    <%= form.text_area :descricao %>
   </div>
-
-  <div class="field">
-    <%= form.label :preco %>
-    <%= form.text_field :preco %>
-  </div>
-
-  <div class="field">
-    <%= form.label :tempoPreparo %>
-    <%= form.text_field :tempoPreparo %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>

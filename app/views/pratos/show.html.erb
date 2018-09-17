@@ -1,19 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Descricao:</strong>
-  <%= @prato.descricao %>
-</p>
-
-<p>
-  <strong>Preco:</strong>
-  <%= @prato.preco %>
-</p>
-
-<p>
-  <strong>Tempopreparo:</strong>
-  <%= @prato.tempoPreparo %>
-</p>
-
-<%= link_to 'Edit', edit_prato_path(@prato) %> |
-<%= link_to 'Back', pratos_path %>
+<div class="">
+	<div class="container">
+		<p id="notice"><%= notice %></p>
+		
+		<div class="page-header">
+			<h1 class="title">Prato</h1>
+		</div>
+		<div class="texto-exibir">
+			<p>
+				<strong>Descricao:</strong>
+				<%= @prato.descricao %>
+			</p>
+			<br>
+			<p>
+				<strong>Preco:</strong>
+				<%= @prato.preco %>
+			</p>
+			<br>
+			<p>
+				<strong>Tempopreparo:</strong>
+				<%= @prato.tempoPreparo %>
+			</p>
+		</div>
+		<div class="btn-container">
+			<%= link_to 'Editar', edit_prato_path(@prato), :class => "btn btn-primary" %>
+			<%= link_to 'Voltar', pratos_path, :class => "btn btn-default" %>
+		</div>
+	</div>
+</div>
