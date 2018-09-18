@@ -1,3 +1,69 @@
 // Place all the styles related to the Pratos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.container-prato {
+	margin: 10px 0;
+	.texto-exibir {
+		background: #F1F1F1;
+		border-radius: 5px;
+		padding: 20px;
+		padding-bottom: 0;
+		p {
+			line-height: 30px;
+			color: #565656;
+		}
+		.container-bnt-crud {
+		    text-align: center;
+		    margin-top: 20px;
+		    padding: 0;
+		    margin-left: -20px;
+    		margin-right: -20px;
+		    a {
+		    	&.btn-primary,
+		    	&.btn-danger,
+		    	&.btn-success{
+			    	border: none;
+			    	background-color: #f1f1f1;
+					font-weight: bold;
+		    	}
+		    	&.btn-success{
+			    	border-radius: 0 0 0 5px;
+			    	color: #5cb85c;
+			    	border-top: 2px solid #5cb85c !important;
+			    	&:hover{
+			    		background-color: #5cb85c;
+			    		color: #fff;
+				    }
+			    }
+			    &.btn-primary{
+			    	border-radius: 0;
+			    	color: #337ab7;
+			    	border-top: 2px solid #337ab7 !important;
+			    	&:hover{
+			    		background-color: #337ab7;
+			    		color: #fff;
+				    }
+			    }
+			    &.btn-danger {
+					border-radius: 0 0 5px 0px;
+					color: #d9534f;
+					border-top: 2px solid #d9534f !important;
+			    	&:hover{
+			    		background-color: #d9534f;
+			    		color: #fff;
+				    }
+				}
+		    }
+		}
+	}
+}
+
+.custom-checkbox {
+    display: inline-block;
+    padding-right: 20px;
+    font-size: 15px;
+    line-height: 40px;
+    font-weight: normal;
+}

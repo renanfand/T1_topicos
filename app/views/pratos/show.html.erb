@@ -22,14 +22,13 @@
 			</p>
 			<br>
 			<p>
-				<strong>Ingrediente:</strong>
-				<%= @prato.ingrediente.descricao %>
-			</p>
-
-			<br>
-			<p>
 				<strong>Cozinha:</strong>
 				<%= @prato.cozinha.nome %>
+			</p>
+			<br>
+			<p>
+				<strong>Ingredientes:</strong>
+				<%= @prato.ingredientes.map(&:descricao).join(', ') %>
 			</p>
 
 		</div>
