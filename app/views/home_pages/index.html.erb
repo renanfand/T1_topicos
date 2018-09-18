@@ -1,0 +1,41 @@
+<div class="container">
+
+	<p id="notice"><%= notice %></p>
+	<div class="page-header">
+		<h1 class="title">Pratos</h1>
+	</div>
+
+	<div class="col-xs-12">
+		<% if !@pratos.blank? %>
+		<% @pratos.each do |prato| %>
+		<div class="container-prato col-xs-4">
+			<div class="texto-exibir texto-exibir-pratos col-xs-12">
+				<p>
+					<strong>Descricao:</strong>
+					<%= prato.descricao %>
+				</p>
+				<p>
+					<strong>Preco:</strong>
+					<%= prato.preco %>
+				</p>
+				<p>
+					<strong>Tempopreparo:</strong>
+					<%= prato.tempoPreparo %>
+				</p>
+				<p>
+					<strong>Restaurante:</strong>
+					<%= prato.cozinha.nome %>
+				</p>
+				<p>
+					<strong>Ingredientes:</strong>
+					<%= prato.ingredientes.map(&:descricao).join(', ') %> 
+				</p>
+			</div>
+		</div>
+		<% end %>
+
+		<% else %>
+		<p>Não a pratos cadastrados no momento! :(</p>
+		<% end %>
+	</div>
+</div>
