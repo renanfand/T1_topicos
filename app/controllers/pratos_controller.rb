@@ -12,6 +12,18 @@ class PratosController < ApplicationController
   def show
   end
 
+  def buscar
+    
+  end
+
+  def resultado
+    @pratos = Prato.search(params[:query])
+
+    if (@pratos == nil)
+      puts "prato nao localizado"
+    end
+  end
+
   # GET /pratos/new
   def new
     @prato = Prato.new
